@@ -82,7 +82,7 @@ func RegUser(c *gin.Context) {
 			status = 400
 		} else {
 			resValue := ResValue{}
-			err := json.Unmarshal([]byte(string(resPost)), &resValue)
+			err := json.Unmarshal([]byte(resPost), &resValue)
 			if err != nil {
 				message = "Service error" //err.Error()
 				status = 400
@@ -126,7 +126,7 @@ func Login(c *gin.Context) {
 			status = 400
 		} else {
 			resValue := ResValue{}
-			err := json.Unmarshal([]byte(string(resPost)), &resValue)
+			err := json.Unmarshal([]byte(resPost), &resValue)
 			if err != nil {
 				message = "Service error" //err.Error()
 				status = 400
